@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:cb="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/text_view_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_white"
+                android:padding="@dimen/view_padding"
+                android:text="@string/text_view"
+                android:textSize="@dimen/big_font"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/text_view_title"
+                android:padding="@dimen/view_padding"
+                android:textColorHighlight="@android:color/holo_blue_dark"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/small_font"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/justify_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:padding="@dimen/view_padding"
+                android:text="@string/justify_text_view"
+                android:textSize="@dimen/big_font"
+                android:textStyle="bold">
+            </TextView>
+
+            <me.biubiubiu.justifytext.library.JustifyTextView
+                android:id="@+id/justify_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/justify_title"
+                android:background="@drawable/blue_select"
+                android:padding="@dimen/view_padding"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/small_font"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/align_text_view_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/red"
+                android:padding="@dimen/view_padding"
+                android:text="@string/align_text_view"
+                android:textSize="@dimen/big_font"
+                android:textStyle="bold">
+            </TextView>
+
+            <me.codeboy.android.aligntextview.AlignTextView
+                android:id="@+id/align_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/align_text_view_title"
+                android:background="@color/red2"
+                android:ellipsize="marquee"
+                android:padding="@dimen/view_padding"
+                android:textSize="@dimen/small_font"
+                cb:align="left"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/cb_align_text_view_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:padding="@dimen/view_padding"
+                android:text="@string/cb_align_text_view"
+                android:textSize="@dimen/big_font"
+                android:textStyle="bold">
+            </TextView>
+
+            <me.codeboy.android.aligntextview.CBAlignTextView
+                android:id="@+id/cb_align_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/cb_align_text_view_title"
+                android:background="@drawable/green_select"
+                android:paddingTop="@dimen/view_padding"
+                android:textColorHighlight="@android:color/holo_blue_dark"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/small_font"
+                cb:punctuationConvert="true"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
